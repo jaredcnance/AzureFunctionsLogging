@@ -3,6 +3,7 @@
 ### Pre-Requisites
 
 - [func.exe](https://github.com/Azure/azure-functions-cli)
+- MSBuild 15 (this is installed if you have Visual Studio 2017 or the dotnet core SDK)
 
 ### Running
 
