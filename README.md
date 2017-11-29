@@ -8,7 +8,7 @@
 ### Running
 
 1. `git clone https://github.com/jaredcnance/AzureFunctionsLogging.git`
-2. cd `./AzureFunctionsLogging/AzureFunctionsLogging`
+2. `cd ./AzureFunctionsLogging/AzureFunctionsLogging`
 3. `dotnet build` or `msbuild.exe`
 4. `func host start`
 5. Send request:
