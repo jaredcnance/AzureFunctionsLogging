@@ -1,0 +1,19 @@
+﻿{
+  "scriptFile": "..\\bin\\net461\\AzureFunctionsLogging.dll",
+  "entryPoint": "AzureFunctionsLogging.Serilog.Function.Run",
+  "disabled": false,
+  "bindings": [
+    {
+      "name": "req",
+      "type": "httpTrigger",
+      "direction": "in",
+      "authLevel": "anonymous",
+      "methods": [ "post" ]
+    },
+    {
+      "name": "res",
+      "type": "http",
+      "direction": "out"
+    }
+  ]
+}

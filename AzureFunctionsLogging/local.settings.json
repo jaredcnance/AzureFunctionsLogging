@@ -1,0 +1,10 @@
+﻿{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "",
+    "AzureWebJobsDashboard": "",
+    "Stackify.ApiKey": "",
+    "Stackify.AppName": "AzureFunctionsLogging_Test",
+    "Stackify.Environment": "Test"
+  }
+}
