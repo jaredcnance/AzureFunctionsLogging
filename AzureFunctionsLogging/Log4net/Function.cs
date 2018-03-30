@@ -7,6 +7,7 @@ using Autofac;
 using AzureFunctionsLogging.Extensions;
 using Microsoft.Azure.WebJobs;
 using StackifyLib.Utils;
+using StackifyLib;
 
 namespace AzureFunctionsLogging.Log4net
 {
@@ -14,9 +15,11 @@ namespace AzureFunctionsLogging.Log4net
     {
         private static readonly IContainer _serviceProvider = new ServiceProvider().Instance;
 
-        public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceWriter log, ExecutionContext context)
+        public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceWriter log)
         {
-            context.LoadLog4NetConfig();
+            var stackifyAppender = new StackifyAppender();
+            stackifyAppender.ActivateOptions();
+            log4net.Config.BasicConfigurator.Configure(stackifyAppender);
 
             var body = await req.Content.ReadAsStringAsync();
 
